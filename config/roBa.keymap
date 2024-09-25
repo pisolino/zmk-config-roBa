@@ -50,6 +50,11 @@
             bindings = <&kp ENTER>;
             key-positions = <32 33>;
         };
+
+        ctrl {
+            bindings = <&kp LCTRL>;
+            key-positions = <11 10>;
+        };
     };
 
     macros {
