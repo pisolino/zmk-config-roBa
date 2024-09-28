@@ -10,6 +10,11 @@
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
+    bindings = <&kp>, <&key_repeat>;
+};
+
+&lt {
+    bindings = <&mo>, <&key_repeat>;
 };
 
 / {
@@ -82,10 +87,10 @@
 
         default_layer {
             bindings = <
-&mt ESCAPE Q      &kp W         &kp E             &kp R                        &kp T                                                            &kp Y               &kp U        &kp I        &kp O    &mt MINUS P
-&mt LCTRL A       &kp S         &kp D             &kp F                        &kp G                   &kp ESCAPE              &kp SQT          &kp H               &mt MINUS J  &mt EQUAL K  &kp L    &mt LEFT_CONTROL SEMICOLON
-&mt LEFT_SHIFT Z  &kp X         &kp C             &kp V                        &kp B                   &lt 4 BACKSLASH         &kp MINUS        &kp N               &kp M        &kp COMMA    &kp DOT  &mt LEFT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_ALT  &kp LEFT_COMMAND  &lt_to_layer_0 1 LANG_HANJA  &mt LEFT_COMMAND LANG2  &mt LEFT_SHIFT SPACE    &lt 3 BACKSPACE  &lt 2 LANG_HANGEUL                                     &mt LANG1 ENTER
+&mt ESCAPE Q      &kp W         &kp E             &kp R             &kp T                                                            &kp Y               &kp U        &kp I        &kp O    &mt MINUS P
+&mt LCTRL A       &kp S         &kp D             &kp F             &kp G                   &kp ESCAPE              &kp SQT          &kp H               &mt MINUS J  &mt EQUAL K  &kp L    &mt LEFT_CONTROL SEMICOLON
+&mt LEFT_SHIFT Z  &kp X         &kp C             &kp V             &kp B                   &lt 4 BACKSLASH         &kp MINUS        &kp N               &kp M        &kp COMMA    &kp DOT  &mt LEFT_SHIFT SLASH
+&kp LCTRL         &kp LEFT_ALT  &kp LEFT_COMMAND  &lt 1 LANG_HANJA  &mt LEFT_COMMAND LANG2  &mt LEFT_SHIFT SPACE    &lt 3 BACKSPACE  &lt 2 LANG_HANGEUL                                     &mt LANG1 ENTER
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
