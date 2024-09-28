@@ -7,10 +7,7 @@
 #define SCROLL 5
 #define NUM 6
 
-&mt {
-    flavor = "balanced";
-    quick-tap-ms = <0>;
-};
+&mt { flavor = "tap-preferred"; };
 
 / {
     combos {
@@ -76,12 +73,6 @@
             tapping-term-ms = <200>;
         };
 
-        tap_dance: tap_dance {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE";
-            #binding-cells = <2>;
-        };
-
         space_shift: space_shift {
             compatible = "zmk,behavior-tap-dance";
             label = "SPACE_SHIFT";
@@ -95,6 +86,34 @@
             #binding-cells = <0>;
             bindings = <&lt 3 BACKSPACE>, <&kp BACKSPACE>;
         };
+
+        lt1_lang_toggle: lt1_lang_toggle {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LT1_LANG_TOGGLE";
+            #binding-cells = <0>;
+            bindings = <&lt 1 LANG2>, <&kp LANG1>;
+        };
+
+        lt2_lang_toggle: lt2_lang_toggle {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LT2_LANG_TOGGLE";
+            #binding-cells = <0>;
+            bindings = <&lt 2 LANG1>, <&kp LANG2>;
+        };
+
+        cmd_lang_toggle: cmd_lang_toggle {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CMD_LANG_TOGGLE";
+            #binding-cells = <0>;
+            bindings = <&mt LEFT_COMMAND LANG2>, <&kp LANG1>;
+        };
+
+        alt_lang_toggle: alt_lang_toggle {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ALT_LANG_TOGGLE";
+            #binding-cells = <0>;
+            bindings = <&mt LEFT_ALT LANG1>, <&kp LANG2>;
+        };
     };
 
     keymap {
@@ -102,10 +121,10 @@
 
         default_layer {
             bindings = <
-&mt ESCAPE Q      &kp W         &kp E             &kp R             &kp T                                                      &kp Y               &kp U        &kp I        &kp O    &mt MINUS P
-&mt LCTRL A       &kp S         &kp D             &kp F             &kp G                   &kp ESCAPE         &kp SQT         &kp H               &mt MINUS J  &mt EQUAL K  &kp L    &mt LEFT_CONTROL SEMICOLON
-&mt LEFT_SHIFT Z  &kp X         &kp C             &kp V             &kp B                   &lt 4 BACKSLASH    &kp MINUS       &kp N               &kp M        &kp COMMA    &kp DOT  &mt LEFT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_ALT  &kp LEFT_COMMAND  &lt 1 LANG_HANJA  &mt LEFT_COMMAND LANG2  &space_shift       &lt3_backspace  &lt 2 LANG_HANGEUL                                     &mt LANG1 ENTER
+&mt ESCAPE Q      &kp W               &kp E                   &kp R        &kp T                                                             &kp Y             &kp U        &kp I        &kp O               &mt MINUS P
+&mt LCTRL A       &kp S               &kp D                   &kp F        &kp G                   &kp ESCAPE              &kp SINGLE_QUOTE  &kp H             &mt MINUS J  &mt EQUAL K  &mt SINGLE_QUOTE L  &mt LEFT_CONTROL SEMICOLON
+&mt LEFT_SHIFT Z  &kp X               &kp C                   &kp V        &kp B                   &lt 4 BACKSLASH         &kp MINUS         &kp N             &kp M        &kp COMMA    &kp DOT             &mt LEFT_SHIFT SLASH
+&kp LCTRL         &mt LEFT_ALT LANG1  &mt LEFT_COMMAND LANG2  &lt 1 LANG2  &mt LEFT_COMMAND LANG2  &mt LEFT_SHIFT SPACE    &lt 3 BACKSPACE   &lt2_lang_toggle                                                &mt LANG1 ENTER
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
