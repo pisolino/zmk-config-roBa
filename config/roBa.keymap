@@ -25,12 +25,12 @@
 
         minus {
             bindings = <&kp MINUS>;
-            key-positions = <8 9>;
+            key-positions = <6 7>;
         };
 
         eq {
             bindings = <&kp EQUAL>;
-            key-positions = <20 21>;
+            key-positions = <7 8>;
         };
 
         escape {
