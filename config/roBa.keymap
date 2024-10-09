@@ -15,12 +15,12 @@
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <11 12>;
+            key-positions = <11 10>;
         };
 
         shift_tab {
             bindings = <&kp LS(TAB)>;
-            key-positions = <12 13>;
+            key-positions = <12 11>;
         };
 
         minus {
@@ -30,7 +30,7 @@
 
         eq {
             bindings = <&kp EQUAL>;
-            key-positions = <24 25>;
+            key-positions = <20 21>;
         };
 
         escape {
@@ -105,7 +105,7 @@
         SYMBOL {
             bindings = <
 &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT                        &kp LCTRL  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&trans           &trans       &trans    &trans      &trans       &trans    &trans      &trans     &trans         &trans        &kp LEFT_BRACKET      &kp RIGHT_BRACKET
+&kp GRAVE        &trans       &trans    &trans      &trans       &trans    &trans      &trans     &trans         &trans        &kp LEFT_BRACKET      &kp RIGHT_BRACKET
 &trans           &trans       &trans    &trans      &trans       &trans    &kp EQUAL   &trans     &trans         &trans        &trans                &trans
 &trans           &trans       &trans    &trans      &trans       &trans    &kp DELETE  &trans                                                        &trans
             >;
