@@ -91,14 +91,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_CTRL_TAB";
             #binding-cells = <0>;
-            bindings = <&mt LCTRL A>, <&mt TAB A>;
+            bindings = <&mt LCTRL A>, <&kp TAB>;
         };
 
         td_lang_cmd: td_lang_cmd {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_LANG_CMD";
             #binding-cells = <0>;
-            bindings = <&mt LEFT_COMMAND LANG2>, <&mt LEFT_COMMAND LANG1>;
+            bindings = <&mt LEFT_COMMAND LANG2>, <&kp LANG1>;
         };
     };
 
