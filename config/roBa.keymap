@@ -91,7 +91,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_TAB_CTRL";
             #binding-cells = <0>;
-            bindings = <&mt TAB A>, <&mt LCTRL A>;
+            bindings = <&mt LCTRL A>, <&mt TAB A>;
         };
 
         td_lang_cmd: td_lang_cmd {
