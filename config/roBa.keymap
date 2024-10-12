@@ -73,9 +73,9 @@
             tapping-term-ms = <200>;
         };
 
-        space_shift: space_shift {
+        td_space_shift: td_space_shift {
             compatible = "zmk,behavior-tap-dance";
-            label = "SPACE_SHIFT";
+            label = "TD_SPACE_SHIFT";
             #binding-cells = <0>;
             bindings = <&mt LEFT_SHIFT SPACE>, <&kp SPACE>;
         };
@@ -86,6 +86,20 @@
             #binding-cells = <0>;
             bindings = <&lt 3 BACKSPACE>, <&kp BACKSPACE>;
         };
+
+        td_tab_ctrl: td_tab_ctrl {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_TAB_CTRL";
+            #binding-cells = <0>;
+            bindings = <&mt TAB A>, <&mt LCTRL A>;
+        };
+
+        td_lang_cmd: td_lang_cmd {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_LANG_CMD";
+            #binding-cells = <0>;
+            bindings = <&mt LEFT_COMMAND LANG2>, <&mt LEFT_COMMAND LANG1>;
+        };
     };
 
     keymap {
@@ -94,9 +108,9 @@
         default_layer {
             bindings = <
 &mt ESCAPE Q      &kp W               &kp E                   &kp R        &kp T                                                        &kp Y        &kp U        &kp I        &kp O               &mt MINUS P
-&mt LCTRL A       &kp S               &kp D                   &kp F        &kp G                   &kp ESCAPE         &kp SINGLE_QUOTE  &kp H        &mt MINUS J  &mt EQUAL K  &mt SINGLE_QUOTE L  &mt LEFT_CONTROL SEMICOLON
+&td_tab_ctrl      &kp S               &kp D                   &kp F        &kp G                   &kp ESCAPE         &kp SINGLE_QUOTE  &kp H        &mt MINUS J  &mt EQUAL K  &mt SINGLE_QUOTE L  &mt LEFT_CONTROL SEMICOLON
 &mt LEFT_SHIFT Z  &kp X               &kp C                   &kp V        &kp B                   &lt 4 BACKSLASH    &kp MINUS         &kp N        &kp M        &kp COMMA    &kp DOT             &mt LEFT_SHIFT SLASH
-&kp LCTRL         &mt LEFT_ALT LANG1  &mt LEFT_COMMAND LANG2  &lt 1 LANG2  &mt LEFT_COMMAND LANG2  &space_shift       &lt3_backspace    &lt 2 LANG1                                                &mt LANG1 ENTER
+&kp LCTRL         &mt LEFT_ALT LANG1  &mt LEFT_COMMAND LANG2  &lt 1 LANG2  &mt LEFT_COMMAND LANG2  &td_space_shift    &lt3_backspace    &lt 2 LANG1                                                &kp ENTER
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
