@@ -77,14 +77,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_SPACE_SHIFT";
             #binding-cells = <0>;
-            bindings = <&mt LEFT_SHIFT SPACE>, <&kp SPACE>;
+            bindings = <&mt LEFT_SHIFT SPACE>, <&key_repeat>;
         };
 
         lt3_backspace: lt3_backspace {
             compatible = "zmk,behavior-tap-dance";
             label = "LT3_BACKSPACE";
             #binding-cells = <0>;
-            bindings = <&lt 3 BACKSPACE>, <&kp BACKSPACE>;
+            bindings = <&lt 3 BACKSPACE>, <&key_repeat>;
         };
     };
 
