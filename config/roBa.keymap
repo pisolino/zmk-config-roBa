@@ -61,6 +61,20 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        rep_space: rep_space {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &key_repeat>;
+            label = "REP_SPACE";
+        };
+
+        rep_backspace: rep_backspace {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE &key_repeat>;
+            label = "REP_BACKSPACE";
+        };
     };
 
     behaviors {
@@ -77,14 +91,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_SPACE_SHIFT";
             #binding-cells = <0>;
-            bindings = <&mt LEFT_SHIFT SPACE>, <&key_repeat>;
+            bindings = <&mt LEFT_SHIFT SPACE>, <&rep_space>;
         };
 
         lt3_backspace: lt3_backspace {
             compatible = "zmk,behavior-tap-dance";
             label = "LT3_BACKSPACE";
             #binding-cells = <0>;
-            bindings = <&lt 3 BACKSPACE>, <&key_repeat>;
+            bindings = <&lt 3 BACKSPACE>, <&rep_backspace>;
         };
     };
 
