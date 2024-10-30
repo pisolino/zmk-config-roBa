@@ -107,10 +107,10 @@
 
         default_layer {
             bindings = <
-&mt ESCAPE Q        &kp W               &kp E                   &kp R        &kp T                                                        &kp Y        &kp U        &kp I        &kp O               &mt MINUS P
-&mt LEFT_CONTROL A  &kp S               &kp D                   &kp F        &kp G                   &kp ESCAPE         &kp SINGLE_QUOTE  &kp H        &mt MINUS J  &mt EQUAL K  &mt SINGLE_QUOTE L  &mt LEFT_CONTROL SEMICOLON
-&mt LEFT_SHIFT Z    &kp X               &kp C                   &kp V        &kp B                   &lt 4 BACKSLASH    &kp MINUS         &kp N        &kp M        &kp COMMA    &kp DOT             &mt LEFT_SHIFT SLASH
-&kp LCTRL           &mt LEFT_ALT LANG1  &mt LEFT_COMMAND LANG2  &lt 1 LANG2  &mt LEFT_COMMAND LANG2  &td_space_shift    &lt3_backspace    &lt 2 LANG1                                                &kp ENTER
+&mt ESCAPE Q        &kp W               &kp E                   &kp R        &kp T                                                             &kp Y        &kp U        &kp I        &kp O               &mt MINUS P
+&mt LEFT_CONTROL A  &kp S               &kp D                   &kp F        &kp G                   &kp ESCAPE              &kp SINGLE_QUOTE  &kp H        &mt MINUS J  &mt EQUAL K  &mt SINGLE_QUOTE L  &mt LEFT_CONTROL SEMICOLON
+&mt LEFT_SHIFT Z    &kp X               &kp C                   &kp V        &kp B                   &lt 4 BACKSLASH         &kp MINUS         &kp N        &kp M        &kp COMMA    &kp DOT             &mt LEFT_SHIFT SLASH
+&kp LCTRL           &mt LEFT_ALT LANG1  &mt LEFT_COMMAND LANG2  &lt 1 LANG2  &mt LEFT_COMMAND LANG2  &mt LEFT_SHIFT SPACE    &lt 3 BACKSPACE   &lt 2 LANG1                                                &kp ENTER
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
