@@ -127,10 +127,10 @@
 
         NUM {
             bindings = <
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4      &kp N5                       &kp NUMBER_6  &kp N7        &kp N8        &kp N9         &kp N0
-&kp TAB       &kp LS(TAB)   &trans        &trans            &trans  &trans       &trans  &kp HOME      &kp LEFT      &kp UP_ARROW  &kp RIGHT      &kp LCTRL
-&trans        &trans        &trans        &trans            &trans  &kp GRAVE    &trans  &kp END       &kp LG(LEFT)  &kp DOWN      &kp LG(RIGHT)  &trans
-&trans        &trans        &trans        &kp LEFT_COMMAND  &trans  &trans       &trans  &trans                                                   &trans
+&kp NUMBER_1      &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4      &kp N5                       &kp NUMBER_6  &kp N7        &kp N8        &kp N9         &kp N0
+&kp LEFT_CONTROL  &trans        &trans        &trans            &trans  &trans       &trans  &kp HOME      &kp LEFT      &kp UP_ARROW  &kp RIGHT      &kp LCTRL
+&trans            &trans        &trans        &trans            &trans  &kp GRAVE    &trans  &kp END       &kp LG(LEFT)  &kp DOWN      &kp LG(RIGHT)  &trans
+&trans            &trans        &trans        &kp LEFT_COMMAND  &trans  &trans       &trans  &trans                                                   &trans
             >;
 
             sensor-bindings = <&inc_dec_kp UP_ARROW DOWN_ARROW>;
