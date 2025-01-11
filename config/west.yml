@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: kumamuk-git
       url-base: https://github.com/kumamuk-git
+    - name: pisolino
+      url-base: https://github.com/pisolino
   projects:
     - name: zmk
       remote: zmkfirmware
