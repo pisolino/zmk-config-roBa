@@ -9,11 +9,11 @@
 
 &mt {
     flavor = "tap-preferred";
-    quick-tap-ms = <150>;
+    quick-tap-ms = <180>;
 };
 
 &lt {
-    quick-tap-ms = <150>;
+    quick-tap-ms = <180>;
     flavor = "tap-preferred";
 };
 
@@ -86,14 +86,14 @@
             bindings = <&kp SPACE>, <&rep_space>;
         };
 
-        space_shift_tap: space_shift_tap {
+        tap_and_tap: tap_and_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "SPACE_SHIFT_TAP";
-            bindings = <&kp>, <&td_space>;
+            label = "TAP_AND_TAP";
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
+            quick-tap-ms = <180>;
             flavor = "tap-preferred";
         };
 
@@ -104,14 +104,14 @@
             bindings = <&kp BACKSPACE>, <&rep_backspace>;
         };
 
-        layer_backspace: layer_backspace {
+        layer_kp: layer_kp {
             compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_BACKSPACE";
+            label = "LAYER_KP";
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
+            quick-tap-ms = <180>;
             flavor = "tap-preferred";
         };
     };
@@ -124,7 +124,7 @@
 &mt ESCAPE Q        &kp W               &kp E                   &kp R        &kp T                                                                                    &kp Y        &kp U        &kp I        &kp O               &mt MINUS P
 &mt LEFT_CONTROL A  &kp S               &kp D                   &kp F        &kp G                   &kp ESCAPE                         &kp SINGLE_QUOTE              &kp H        &mt MINUS J  &mt EQUAL K  &mt SINGLE_QUOTE L  &mt LEFT_CONTROL SEMICOLON
 &mt LEFT_SHIFT Z    &kp X               &kp C                   &kp V        &kp B                   &lt 4 BACKSLASH                    &kp MINUS                     &kp N        &kp M        &kp COMMA    &kp DOT             &mt LEFT_SHIFT SLASH
-&kp LCTRL           &mt LEFT_ALT LANG1  &mt LEFT_COMMAND LANG2  &lt 1 LANG2  &mt LEFT_COMMAND LANG2  &space_shift_tap LEFT_SHIFT 0      &layer_backspace 3 BACKSPACE  &lt 2 LANG1                                                &kp ENTER
+&kp LCTRL           &mt LEFT_ALT LANG1  &mt LEFT_COMMAND LANG2  &lt 1 LANG2  &mt LEFT_COMMAND LANG2  &tap_and_tap LEFT_SHIFT SPACE      &layer_kp 3 BACKSPACE  &lt 2 LANG1                                                &kp ENTER
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
