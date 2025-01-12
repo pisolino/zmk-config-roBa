@@ -91,7 +91,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_SPACE_SHIFT";
             #binding-cells = <0>;
-            bindings = <&mt LEFT_SHIFT SPACE>, <&kp SPACE>;
+            bindings = <&mt LEFT_SHIFT SPACE>, <&rep_space>;
         };
 
         lt3_backspace: lt3_backspace {
