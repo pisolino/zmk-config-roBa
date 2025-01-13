@@ -9,11 +9,13 @@
 
 &mt {
     flavor = "tap-preferred";
-    quick-tap-ms = <180>;
+    tapping-term-ms = <180>;
+    quick-tap-ms = <150>;
 };
 
 &lt {
-    quick-tap-ms = <180>;
+    tapping-term-ms = <180>;
+    quick-tap-ms = <150>;
     flavor = "tap-preferred";
 };
 
@@ -89,29 +91,15 @@
     };
 
     behaviors {
-        td_space: td_space {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_SPACE";
-            #binding-cells = <0>;
-            bindings = <&kp SPACE>, <&rep_space>;
-        };
-
         kp_and_kp: kp_and_kp {
             compatible = "zmk,behavior-hold-tap";
             label = "KP_AND_KP";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <180>;
+            tapping-term-ms = <180>;
+            quick-tap-ms = <150>;
             flavor = "tap-preferred";
-        };
-
-        td_backspace: td_backspace {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_BACKSPACE";
-            #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&rep_backspace>;
         };
 
         layer_kp: layer_kp {
@@ -120,8 +108,8 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <180>;
+            tapping-term-ms = <180>;
+            quick-tap-ms = <150>;
             flavor = "tap-preferred";
         };
 
@@ -129,6 +117,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_COMMAND_LANG2_MOUSE";
             #binding-cells = <0>;
+            tapping-term-ms = <180>;
             bindings = <&mt LEFT_GUI LANGUAGE_2>, <&mo4_command>;
         };
     };
