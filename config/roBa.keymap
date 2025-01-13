@@ -83,9 +83,13 @@
         mo4_command: mouse_command {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &mo 4 &kp LEFT_COMMAND>,
-                       <&macro_pause_for_release>,
-                       <&macro_release &mo 4 &kp LEFT_COMMAND>;
+            bindings =
+                <&macro_press>,
+                <&mo 4 &kp LEFT_COMMAND>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mo 4 &kp LEFT_COMMAND>;
+
             label = "MOUSE_COMMAND";
         };
     };
@@ -169,10 +173,10 @@
 
         MOUSE {
             bindings = <
-&trans   &trans       &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
-&kp TAB  &kp LS(TAB)  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mo 5     &mkp MB2  &trans
-&trans   &trans       &trans  &trans  &trans  &trans      &trans  &trans  &trans    &mkp MB3  &trans    &trans
-&trans   &trans       &trans  &trans  &trans  &trans      &trans  &trans                                &trans
+&trans   &trans       &trans  &trans  &trans                      &trans  &trans    &trans      &trans    &trans
+&kp TAB  &kp LS(TAB)  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &kp ESCAPE  &mkp MB2  &trans
+&trans   &trans       &trans  &trans  &trans  &trans      &trans  &trans  &trans    &mkp MB3    &trans    &trans
+&trans   &trans       &trans  &trans  &trans  &trans      &trans  &trans                                  &trans
             >;
         };
 
