@@ -81,8 +81,9 @@
         mo4_command: mouse_command {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mo 4 &kp LEFT_COMMAND>, <&macro_press>;
-
+            bindings = <&macro_press &mo 4 &kp LEFT_COMMAND>,
+                       <&macro_pause_for_release>,
+                       <&macro_release &mo 4 &kp LEFT_COMMAND>;
             label = "MOUSE_COMMAND";
         };
     };
