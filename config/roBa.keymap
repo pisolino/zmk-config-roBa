@@ -87,9 +87,9 @@
             bindings = <&kp SPACE>, <&rep_space>;
         };
 
-        tap_and_tap: tap_and_tap {
+        kp_and_kp: kp_and_kp {
             compatible = "zmk,behavior-hold-tap";
-            label = "TAP_AND_TAP";
+            label = "KP_AND_KP";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -115,6 +115,13 @@
             quick-tap-ms = <180>;
             flavor = "tap-preferred";
         };
+
+        td_command_lang2_mouse: td_command_lang2_mouse {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_COMMAND_LANG2_MOUSE";
+            #binding-cells = <0>;
+            bindings = <&mt LEFT_GUI LANGUAGE_2>, <&mo 4>;
+        };
     };
 
     keymap {
@@ -122,10 +129,10 @@
 
         default_layer {
             bindings = <
-&mt ESCAPE Q        &kp W               &kp E                   &kp R        &kp T                                                                             &kp Y        &kp U  &kp I      &kp O               &mt MINUS P
-&mt LEFT_CONTROL A  &kp S               &kp D                   &kp F        &kp G                   &kp ESCAPE                         &kp SINGLE_QUOTE       &kp H        &kp J  &kp K      &mt SINGLE_QUOTE L  &mt LEFT_CONTROL SEMICOLON
-&mt LEFT_SHIFT Z    &kp X               &kp C                   &kp V        &kp B                   &lt 4 GRAVE                        &kp TAB                &kp N        &kp M  &kp COMMA  &kp DOT             &mt LEFT_SHIFT SLASH
-&kp LCTRL           &mt LEFT_ALT LANG1  &mt LEFT_COMMAND LANG2  &lt 1 LANG2  &mt LEFT_COMMAND LANG2  &tap_and_tap LEFT_SHIFT SPACE      &layer_kp 3 BACKSPACE  &lt 2 LANG1                                        &kp ENTER
+&mt ESCAPE Q        &kp W               &kp E                   &kp R        &kp T                                                                            &kp Y        &kp U  &kp I      &kp O               &mt MINUS P
+&mt LEFT_CONTROL A  &kp S               &kp D                   &kp F        &kp G                    &kp ESCAPE                       &kp SINGLE_QUOTE       &kp H        &kp J  &kp K      &mt SINGLE_QUOTE L  &mt LEFT_CONTROL SEMICOLON
+&mt LEFT_SHIFT Z    &kp X               &kp C                   &kp V        &kp B                    &lt 4 GRAVE                      &kp TAB                &kp N        &kp M  &kp COMMA  &kp DOT             &mt LEFT_SHIFT SLASH
+&kp LCTRL           &mt LEFT_ALT LANG1  &mt LEFT_COMMAND LANG2  &lt 1 LANG2  &td_command_lang2_mouse  &kp_and_kp LEFT_SHIFT SPACE      &layer_kp 3 BACKSPACE  &lt 2 LANG1                                        &kp ENTER
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
