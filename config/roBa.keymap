@@ -77,6 +77,13 @@
             bindings = <&kp BACKSPACE &key_repeat>;
             label = "REP_BACKSPACE";
         };
+
+        mo4_command: mouse_command {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mo 4 &kp LEFT_COMMAND>;
+            label = "MOUSE_COMMAND";
+        };
     };
 
     behaviors {
@@ -120,7 +127,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_COMMAND_LANG2_MOUSE";
             #binding-cells = <0>;
-            bindings = <&mt LEFT_GUI LANGUAGE_2>, <&mo 4>;
+            bindings = <&mt LEFT_GUI LANGUAGE_2>, <&mo4_command>;
         };
     };
 
@@ -171,10 +178,10 @@
 
         MOUSE {
             bindings = <
-&trans   &trans       &trans  &trans  &trans                                &trans  &trans    &trans    &trans    &trans
-&kp TAB  &kp LS(TAB)  &trans  &trans  &trans            &trans      &trans  &trans  &mkp MB1  &mo 5     &mkp MB2  &trans
-&trans   &trans       &trans  &trans  &trans            &trans      &trans  &trans  &trans    &mkp MB3  &trans    &trans
-&trans   &trans       &trans  &trans  &kp LEFT_COMMAND  &trans      &trans  &trans                                &trans
+&trans   &trans       &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
+&kp TAB  &kp LS(TAB)  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mo 5     &mkp MB2  &trans
+&trans   &trans       &trans  &trans  &trans  &trans      &trans  &trans  &trans    &mkp MB3  &trans    &trans
+&trans   &trans       &trans  &trans  &trans  &trans      &trans  &trans                                &trans
             >;
         };
 
