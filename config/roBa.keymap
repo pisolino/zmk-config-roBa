@@ -121,8 +121,8 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_COMMAND_LANG2_MOUSE";
             #binding-cells = <0>;
-            tapping-term-ms = <180>;
-            bindings = <&mt LEFT_GUI LANGUAGE_2>, <&mo4_command>;
+            tapping-term-ms = <200>;
+            bindings = <&mt LEFT_COMMAND LANGUAGE_2>, <&mo4_command>;
         };
     };
 
@@ -173,9 +173,9 @@
 
         MOUSE {
             bindings = <
-&trans   &trans       &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
-&kp TAB  &kp LS(TAB)  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mo 5     &mkp MB2  &trans
-&trans   &trans       &trans  &trans  &trans  &trans      &trans  &trans  &trans    &mkp MB3  &trans    &trans
+&trans   &trans       &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &kp MINUS
+&kp TAB  &kp LS(TAB)  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mo 5     &mkp MB2  &kp EQUAL
+&trans   &trans       &trans  &trans  &trans  &trans      &trans  &trans  &trans    &mkp MB3  &trans    &kp QUESTION
 &trans   &trans       &trans  &trans  &trans  &trans      &trans  &trans                                &trans
             >;
         };
