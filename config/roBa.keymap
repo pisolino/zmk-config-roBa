@@ -142,7 +142,7 @@
 
         SYMBOL {
             bindings = <
-&kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT                          &kp LCTRL         &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT                          &kp CARET         &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
 &kp TAB          &kp LS(TAB)  &trans    &trans      &trans       &trans      &trans      &trans            &kp MINUS      &kp EQUAL     &kp LEFT_BRACKET      &kp RIGHT_BRACKET
 &trans           &trans       &trans    &trans      &trans       &trans      &kp EQUAL   &trans            &trans         &trans        &trans                &kp BACKSLASH
 &trans           &trans       &trans    &trans      &trans       &trans      &kp DELETE  &kp LEFT_COMMAND                                                     &trans
