@@ -9,13 +9,13 @@
 
 &mt {
     flavor = "tap-preferred";
-    tapping-term-ms = <180>;
-    quick-tap-ms = <170>;
+    tapping-term-ms = <200>;
+    quick-tap-ms = <180>;
 };
 
 &lt {
-    tapping-term-ms = <180>;
-    quick-tap-ms = <170>;
+    tapping-term-ms = <200>;
+    quick-tap-ms = <180>;
     flavor = "tap-preferred";
 };
 
@@ -101,8 +101,8 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
-            quick-tap-ms = <170>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <180>;
             flavor = "tap-preferred";
         };
 
@@ -112,8 +112,8 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
-            quick-tap-ms = <170>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <180>;
             flavor = "tap-preferred";
         };
 
