@@ -1,0 +1,1 @@
+source "$(ZEPHYR_ZMKB_MODULE_DIR)/modules/zmk-behavior-pmw3610-profile/Kconfig" 
