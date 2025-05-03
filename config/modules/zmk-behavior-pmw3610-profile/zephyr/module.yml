@@ -1,6 +1,0 @@
-name: zmk-behavior-pmw3610-profile
-build:
-  cmake: .
-  kconfig: Kconfig
-  settings:
-    dts_root: .
