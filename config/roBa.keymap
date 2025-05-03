@@ -63,6 +63,16 @@
             bindings = <&mo 6>;
             key-positions = <37 39>;
         };
+
+        tab2 {
+            bindings = <&kp TAB>;
+            key-positions = <13 12>;
+        };
+
+        shift_tab2 {
+            bindings = <&kp LS(TAB)>;
+            key-positions = <2 3>;
+        };
     };
 
     macros {
