@@ -14,5 +14,9 @@ manifest:
     - name: zmk-pmw3610-driver
       remote: pisolino
       revision: main
+    - name: zmk-behavior-pmw3610-profile
+      remote: pisolino
+      revision: main
+      path: modules/zmk-behavior-pmw3610-profile
   self:
     path: config

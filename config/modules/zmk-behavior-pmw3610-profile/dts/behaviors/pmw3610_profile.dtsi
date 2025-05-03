@@ -1,0 +1,21 @@
+/*
+ * Copyright (c) 2024 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+/ {
+    behaviors {
+        /omit-if-no-ref/ pmw_prec: pmw_precision_profile {
+            compatible = "zmk,behavior-pmw3610-profile";
+            #binding-cells = <0>;
+            profile-type = "precision";
+        };
+        
+        /omit-if-no-ref/ pmw_speed: pmw_speed_profile {
+            compatible = "zmk,behavior-pmw3610-profile";
+            #binding-cells = <0>;
+            profile-type = "speed";
+        };
+    };
+}; 
