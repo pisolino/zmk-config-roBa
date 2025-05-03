@@ -134,7 +134,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_COMMAND_LANG2_MO4";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             bindings = <&mt LEFT_COMMAND LANGUAGE_2>, <&mo4_command>;
         };
 
@@ -142,7 +142,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_LT1_LANG2_MO4";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             bindings = <&lt 1 LANGUAGE_2>, <&mo4_alt>;
         };
     };
