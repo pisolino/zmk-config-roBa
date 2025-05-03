@@ -1,7 +1,0 @@
-config ZMK_BEHAVIOR_PMW3610_PROFILE
-    bool "Support for PMW3610 profile switching behavior"
-    depends on PMW3610_PROFILE_SWITCHING
-    default y
-    help
-      Support for PMW3610 profile switching behavior that allows on-the-fly
-      switching between precision and speed profiles. 

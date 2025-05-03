@@ -2,7 +2,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <zmk-behavior-pmw3610-profile/dts/behaviors/pmw3610_profile.dtsi>
+#include "dts/behaviors/pmw3610_profile.dtsi"
 
 #define MOUSE 4
 #define SCROLL 5
