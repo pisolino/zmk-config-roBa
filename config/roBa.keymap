@@ -220,8 +220,8 @@
             bindings = <
 &kp ESCAPE      &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &kp MINUS
 &kp TAB         &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &kp LEFT_CONTROL
-&kp LEFT_SHIFT  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &kp RETURN
-&trans          &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&kp LEFT_SHIFT  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &kp LEFT_SHIFT
+&trans          &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &kp ENTER
             >;
         };
     };
