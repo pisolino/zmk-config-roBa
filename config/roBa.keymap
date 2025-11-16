@@ -8,7 +8,7 @@
 #define SCROLL 5
 #define NUM 6
 
-&mkp_input_listener { input-processors = <&zip_temp_layer 4 10000>; };
+&mkp_input_listener { input-processors = <&zip_temp_layer 4 2000>; };
 
 &mt {
     flavor = "balanced";
